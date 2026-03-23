@@ -26,8 +26,6 @@ public class IngestionConfig {
     @EventListener(ApplicationReadyEvent.class)
     public void startIngestion() {
         try {
-            System.out.println("Iniciando ingestão do documento...");
-
             var resource = getClass().getClassLoader().getResource("docs/article_thebeatoct2024.pdf");
 
             if (resource == null) {
